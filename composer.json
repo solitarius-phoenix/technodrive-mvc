@@ -1,0 +1,11 @@
+{
+    "name": "technodrive/mvc",
+    "description": "Technodrive MVC elements",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Technodrive\\Mvc\\": "src"
+        }
+    },
+    "require": {}
+}
