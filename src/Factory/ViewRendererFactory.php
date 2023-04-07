@@ -10,7 +10,7 @@ class ViewRendererFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container)
     {
-        return new ViewRenderer();
+        return new ViewRenderer($container);
     }
 
 }

@@ -58,28 +58,6 @@ abstract class AbstractView implements ViewInterface
         return $this->variables[$name]??'';
     }
 
-    /**
-     * @return void
-     * @throws TemplateNotFoundException
-     */
-    protected function testPath(): void
-    {
-        if(! file_exists($this->template)) {
-            throw new TemplateNotFoundException('resolver could not resolve to a file');
-        }
-    }
-
-    /**
-     * @return string
-     * @throws TemplateNotFoundException
-     */
-    public function render(): string
-    {
-        $this->testPath();
-        ob_start();
-        require_once $this->template;
-        return ob_get_clean();
-    }
 
 
     public function __isset(string $name)
